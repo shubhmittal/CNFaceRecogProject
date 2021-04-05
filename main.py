@@ -49,14 +49,13 @@ load_weights_from_FaceNet(FRmodel)
 
 database = {}
 
-database["shubham"] = img_to_encoding("images/sk1.jpg", FRmodel)
-database["rdj"] = img_to_encoding("images/rdj.png", FRmodel)
-database["chris"] = img_to_encoding("images/chris.png", FRmodel)
-database["scarlett"] = img_to_encoding("images/scarlett.png", FRmodel)
+database["ca"] = img_to_encoding("images/ca.png", FRmodel)
+database["bw"] = img_to_encoding("images/bw.png", FRmodel)
+database["thor"] = img_to_encoding("images/thor.png", FRmodel)
 
 
 for key in database:
-    path = "/content/Face-recog-comp-project/" + key
+    path = "/content/CNFaceRecogProject/" + key
     os.mkdir(path) 
 
 def verify(image_path, identity, database, model):
@@ -74,15 +73,15 @@ def verify(image_path, identity, database, model):
     return door_open
 
 
-yourpath = '/content/Face-recog-comp-project/images'
+yourpath = '/content/CNFaceRecogProject/images'
 
 
 for root, dirs, files in os.walk(yourpath, topdown=False):
   for name in files:
     print(name)
     for key in database:
-        if (verify('/content/Face-recog-comp-project/images/' + str(name), key, database, FRmodel)):
-            shutil.move('/content/Face-recog-comp-project/images/' + str(name), "/content/Face-recog-comp-project/" + key + "/")
+        if (verify('/content/CNFaceRecogProject/images/' + str(name), key, database, FRmodel)):
+            shutil.move('/content/CNFaceRecogProject/images/' + str(name), "/content/CNFaceRecogProject/" + key + "/")
             break
 
 
