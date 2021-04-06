@@ -50,8 +50,6 @@ load_weights_from_FaceNet(FRmodel)
 database = {}
 
 database["ca"] = img_to_encoding("images/ca1.jpg", FRmodel)
-database["bw"] = img_to_encoding("images/bw1.jpg", FRmodel)
-database["thor"] = img_to_encoding("images/thor1.jpg", FRmodel)
 database["sk"] = img_to_encoding("images/sk1.jpg", FRmodel)
 
 
