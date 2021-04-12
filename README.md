@@ -19,10 +19,5 @@ python main.py
 And use Shift + Enter to run all the cells 
 Running all the cells will download all the code and will run the main function for predictions
 You can add your own images to predict and see the code using File and Open Section in Google Colab.
-```
-## Contributors 
-```
-Shubham Kumar 
-Ankit Kumar
-Gajendra Surariya
+
 ```
